@@ -124,6 +124,7 @@ async function forgotPassword(req, res) {
 			user.email,
 			`${url}reset_password/${resetPasswordToken}`
 		);
+		console.log(url);
 		return res
 			.status(200)
 			.json({ message: 'Reset Password Email Sent Successfully' });
